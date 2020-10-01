@@ -1,14 +1,14 @@
 package guru.framework.sfgpetclinic.model;
 
-public class Owner extends Person{
+import java.io.Serializable;
+
+public class BaseEntity implements Serializable {
     private Long id;
 
-    @Override
     public Long getId() {
         return id;
     }
 
-    @Override
     public void setId(Long id) {
         this.id = id;
     }
