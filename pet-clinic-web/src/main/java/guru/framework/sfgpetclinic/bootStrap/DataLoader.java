@@ -1,7 +1,5 @@
 package guru.framework.sfgpetclinic.bootStrap;
 
-import guru.framework.sfgpetclinic.map.OwnerServiceMap;
-import guru.framework.sfgpetclinic.map.VetServiceMap;
 import guru.framework.sfgpetclinic.model.Owner;
 import guru.framework.sfgpetclinic.model.Vet;
 import guru.framework.sfgpetclinic.services.OwnerService;
@@ -12,9 +10,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
