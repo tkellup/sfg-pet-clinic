@@ -5,7 +5,9 @@ import guru.framework.sfgpetclinic.model.Vet;
 import guru.framework.sfgpetclinic.services.OwnerService;
 import guru.framework.sfgpetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
